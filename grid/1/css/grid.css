@@ -1,0 +1,40 @@
+.col-cl-1 {
+    width: 20%;
+}
+.col-cl-2 {
+    width: 40%;
+}
+.col-cl-3 {
+    width: 60%;
+}
+.col-cl-4 {
+    width: 80%;
+}
+.col-cl-5 {
+    width: 100%;
+}
+@media screen and (min-width: 768px){
+    .col-tb-1 {
+        width: 12.5%;
+    }
+    .col-tb-2 {
+        width: 25%;
+    }
+    .col-tb-3 {
+        width: 37.5%;
+    }
+    .col-tb-4 {
+        width: 50%;
+    }
+    .col-tb-5 {
+        width: 62.5%;
+    }
+    .col-tb-6 {
+        width: 75%;
+    }
+    .col-tb-7 {
+        width: 87.5%;
+    }
+    .col-tb-8 {
+        width: 100%;
+    }
