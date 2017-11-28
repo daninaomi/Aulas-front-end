@@ -3,3 +3,89 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.nav-top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 4% 2%;
+    font-size: 1.2rem;
+}
+
+.nav-top__description {
+    width: 25%;
+    text-align: left;
+    color: grey;
+}
+
+.nav-top__logo {
+    width: 25%;
+    text-align: center;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.nav-top-list {
+    width: 25%;
+    text-align: right;
+}
+
+.nav-top__link {
+    color: grey;
+    margin: 0 3%;
+}
+
+.pages {
+    padding: 2% 7%;
+}
+
+.pages-list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pages-list__link {
+    color: #5a6cd8;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.lookbook {
+    width: 100%;
+    padding: 4% 2%;
+}
+
+.lookbook-link {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    color: grey;
+    font-size: 0.8rem;
+}
+
+.lookbook-title {
+    display: block;
+    margin: 3% auto;
+    text-align: center;
+}
+
+.lookbook-title__title {
+    color: #5a6cd8;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2rem;
+}
