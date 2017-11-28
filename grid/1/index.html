@@ -12,17 +12,18 @@
 
 <body>
     <header class="col-tb-8">
-        <section class="nav-principal">
-            <div class="nav-principal__link">
+        <!-- CLASS NAV TOP PARECE ERRADO? -->
+        <section class="nav-top">
+            <div class="nav-top__link">
                 <a href="#"></a>
             </div>
-            <h1 class="nav-principal__logo"><img src="#" alt="logo">blablabla</h1>
-            <div class="nav-principal-list">
-                <a class="nav-principal-list nav-principal__link" href="#"></a>
-                <a class="nav-principal-list nav-principal__link" href="#"></a>
-                <a class="nav-principal-list nav-principal__link" href="#"></a>
-                <a class="nav-principal-list nav-principal__link" href="#"></a>
-            </div>
+            <h1 class="nav-top__logo"><img src="#" alt="logo">blablabla</h1>
+            <nav class="nav-top-list">
+                <a class="nav-top-list nav-top__link" href="#"></a>
+                <a class="nav-top-list nav-top__link" href="#"></a>
+                <a class="nav-top-list nav-top__link" href="#"></a>
+                <a class="nav-top-list nav-top__link" href="#"></a>
+            </nav>
         </section>
         <nav class="pages">
             <ul class="pages-list">
@@ -47,167 +48,187 @@
             <p class="lookbook-title lookbook-title__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         </div>
 
-        <section>
-            <div>
-                <h2>$50</h2>
-                <h2>free shipping</h2>
-                <img src="" alt="icon">
+        <section class="lookbook-row">
+            <div class="lookbook-row-sale">
+                <h2 class="lookbook-row-sale lookbook-row-sale__price">$50 <br> free shipping</h2>
+                <img class="lookbook-row-sale lookbook-row-sale__icon" src="" alt="icon">
             </div>
 
-            <div>
-                <img src="" alt="legs">
+            <div class="lookbook-row-pic-vertical">
+                <img class="lookbook-row-pic-vertical lookbook-row-pic-vertical__pic" src="" alt="legs">
             </div>
 
-            <div>
-                <h2>sickns-ss powell planata deck limited ed.</h2>
+            <div class="lookbook-row-phrases">
+                <h2 class="lookbook-row-phrases lookbook-row-phrases__text">sickns-ss <br> powell planata deck <br> limited ed.</h2>
             </div>
 
-            <div>
-                <img src="" alt="limited edition">
+            <div class="lookbook-row-pic-horizontal">
+                <img class="lookbook-row-pic-horizontal lookbook-row-pic-horizontal__pic" src="" alt="limited edition">
             </div>
         </section>
         
-        <section>
-            <div>
-                <img src="" alt="skater girl">
+        <section class="lookbook-row">
+            <div class="lookbook-row-pic-square">
+                <img class="lookbook-row-pic-square lookbook-row-pic-square__pic" src="" alt="skater girl">
             </div>
-
-            <div>
+            
+            <!-- NAO SEI SE COLOCAR COMO MODIFIER BLUE -->
+            <div class="lookbook-row-phrases lookbook-row-phrases--blue">
                 <p>blabla</p>
                 <h2>the good, the bad and the ugly</h2>
                 <p>blablablabla</p>
             </div>
 
-            <div>
-                <img src="" alt="skater girl 2">
+            <div class="lookbook-row-pic-vertical">
+                <img class="lookbook-row-pic-vertical lookbook-row-pic-vertical__pic" src="" alt="skater girl 2">
             </div>
 
-            <div>
-                <h2>hacks-dd loaded devish cst model</h2>
+            <div class="lookbook-row-phrases">
+                <h2 class="lookbook-row-phrases lookbook-row-phrases__text">hacks-dd <br> loaded devish <br> cst model</h2>
             </div>
         </section>
 
-        <section>
+        <section class="lookbook-row">
+            <!-- NAO SEI SE COLOCAR COMO MODIFIER BLUE -->
             <div>
                 <p>blabla</p>
                 <h2>boots are made for walking</h2>
                 <p>blablablabla</p>
             </div>
 
-            <div>
-                <h2>$75</h2>
-                <h2>free shipping</h2>
-                <img src="" alt="icon">
+            <div class="lookbook-row-sale">
+                <h2 class="lookbook-row-sale lookbook-row-sale__price">$75 <br> free shipping</h2>
+                <img class="lookbook-row-sale lookbook-row-sale__icon" src="" alt="icon">
             </div>
             
-            <div>
-                <img src="" alt="skater girl 3">
+            <div class="lookbook-row-pic-horizontal">
+                <img class="lookbook-row-pic-horizontal lookbook-row-pic-horizontal__pic" src="" alt="skater girl 3">
             </div>
         </section>
 
-        <section>
+        <section class="lookbook-row">
+            <!-- NAO SEI SE COLOCAR COMO MODIFIER BLUE -->
             <div>
                 <p>blabla</p>
-                <h2>go nuts & bolts</h2>
+                <h2>go nuts &amp; bolts</h2>
                 <p>blablablabla</p>
             </div>
             
-            <div>
-                <img src="" alt="skate">
+            <div class="lookbook-row-pic-square">
+                <img class="lookbook-row-pic-square lookbook-row-pic-square__pic" src="" alt="skate">
             </div>
         </section>
 
-        <div>
-            <button>show more</button>
-        </div>
+        <section class="lookbook-row">
+            <div class="lookbook-row-more">
+                <button class="lookbook-row-more lookbook-row-more__botao">show more</button>
+            </div>
 
-        <div>
-            <img src="" alt="dots">
-        </div>
+            <div class="lookbook-row-dots">
+                <a href="#" class="lookbook-row-dot"></a>
+                <a href="#" class="lookbook-row-dot"></a>
+                <a href="#" class="lookbook-row-dot"></a>
+            </div>
+        </section>
 
-        <div>
-            <p></p>
-            <a href="#"></a>
+        <div class="lookbook-back">
+            <p class="lookbook-back lookbook-back__text">Lorem ipsum dolor sit amet</p>
+            <a class="lookbook-back lookbook-back__up" href="#">top</a>
         </div>
 
     </main>
 
-    <footer>
+    <footer class="footer">
 
-        <nav>
-            <h3></h3>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
+        <nav class="footer-sitemap">
 
-            <h3></h3>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
+            <div class="footer-sitemap-area">
+                <h3 class="footer-sitemap-area footer-sitemap-area__title">home</h3>
+                <ul class="footer-sitemap-area footer-sitemap-area-list">
+                    <li class="footer-sitemap-area-list footer-sitemap-area-list__item"></li>
+                    <li class="footer-sitemap-area-list footer-sitemap-area-list__item"></li>
+                    <li class="footer-sitemap-area-list footer-sitemap-area-list__item"></li>
+                    <li class="footer-sitemap-area-list footer-sitemap-area-list__item"></li>
+                    <li class="footer-sitemap-area-list footer-sitemap-area-list__item"></li>
+                    <li class="footer-sitemap-area-list footer-sitemap-area-list__item"></li>
+                    <li class="footer-sitemap-area-list footer-sitemap-area-list__item"></li>
+                    <li class="footer-sitemap-area-list footer-sitemap-area-list__item"></li>
+                    <li class="footer-sitemap-area-list footer-sitemap-area-list__item"></li>
+                    <li class="footer-sitemap-area-list footer-sitemap-area-list__item"></li>
+                    <li class="footer-sitemap-area-list footer-sitemap-area-list__item"></li>
+                </ul>
+            </div>
+
+            <div class="footer-sitemap-area">
+                <h3 class="footer-sitemap-area footer-sitemap-area__title">about</h3>
+                <ul class="footer-sitemap-area-list">
+                    <li class="footer-sitemap-area-list footer-sitemap-area-list__item"></li>
+                    <li class="footer-sitemap-area-list footer-sitemap-area-list__item"></li>
+                    <li class="footer-sitemap-area-list footer-sitemap-area-list__item"></li>
+                    <li class="footer-sitemap-area-list footer-sitemap-area-list__item"></li>
+                </ul>
+            </div>
             
-            <h3></h3>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
+            <div class="footer-sitemap-area">
+                <h3 class="footer-sitemap-area footer-sitemap-area__title">products</h3>
+                <ul class="footer-sitemap-area-list">
+                    <li class="footer-sitemap-area-list footer-sitemap-area-list__item"></li>
+                    <li class="footer-sitemap-area-list footer-sitemap-area-list__item"></li>
+                    <li class="footer-sitemap-area-list footer-sitemap-area-list__item"></li>
+                    <li class="footer-sitemap-area-list footer-sitemap-area-list__item"></li>
+                    <li class="footer-sitemap-area-list footer-sitemap-area-list__item"></li>
+                </ul>
+            </div>
 
-            <h3></h3>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
+            <div class="footer-sitemap-area">
+                <h3 class="footer-sitemap-area footer-sitemap-area__title">more products</h3>
+                <ul class="footer-sitemap-area-list">
+                    <li class="footer-sitemap-area-list footer-sitemap-area-list__item"></li>
+                    <li class="footer-sitemap-area-list footer-sitemap-area-list__item"></li>
+                    <li class="footer-sitemap-area-list footer-sitemap-area-list__item"></li>
+                    <li class="footer-sitemap-area-list footer-sitemap-area-list__item"></li>
+                    <li class="footer-sitemap-area-list footer-sitemap-area-list__item"></li>
+                    <li class="footer-sitemap-area-list footer-sitemap-area-list__item"></li>
+                    <li class="footer-sitemap-area-list footer-sitemap-area-list__item"></li>
+                </ul>
+            </div>
 
-            <h3></h3>
-            <ul>
-                <li></li>
-                <li></li>
-            </ul>
+            <div class="footer-sitemap-area">
+                <h3 class="footer-sitemap-area footer-sitemap-area__title">contact</h3>
+                <ul class="footer-sitemap-area-list">
+                    <li class="footer-sitemap-area-list footer-sitemap-area-list__item"></li>
+                    <li class="footer-sitemap-area-list footer-sitemap-area-list__item"></li>
+                </ul>
+            </div>
 
-            <h3></h3>
-            <ul>
-                <li></li>
-            </ul>
+            <div class="footer-sitemap-area">
+                <h3 class="footer-sitemap-area footer-sitemap-area__title">what else</h3>
+                <ul class="footer-sitemap-area-list">
+                    <li class="footer-sitemap-area-list footer-sitemap-area-list__item"></li>
+                </ul>
+            </div>
 
-            <h3></h3>
-            <div>
-                <i></i>
-                <i></i>
-                <i></i>
-                <i></i>
+            <div class="footer-sitemap-area">
+                <h3 class="footer-sitemap-area footer-sitemap-area__title">social media</h3>
+                <div class="footer-sitemap-area-social">
+                    <i class="footer-sitemap-area-social footer-sitemap-area-social__icon"></i>
+                    <i class="footer-sitemap-area-social footer-sitemap-area-social__icon"></i>
+                    <i class="footer-sitemap-area-social footer-sitemap-area-social__icon"></i>
+                    <i class="footer-sitemap-area-social footer-sitemap-area-social__icon"></i>
+                </div>
             </div>
         </nav>
 
-        <form action="#">
-            <label for="search">search</label>
-            <input name="search" type="text">
-            <button>go</button>
+        <form class="footer-search" action="#">
+            <label class="footer-search__title" for="search">search</label>
+            <input class="footer-search__campo" name="search" type="text" placeholder="your search">
+            <button class="footer-search__botao">go</button>
         </form>
 
-        <div>
-            <p></p>
-            <p></p>
-            <p></p>
+        <div class="footer-info">
+            <p class="footer-info footer-info__text">blabla</p>
+            <p class="footer-info footer-info__text">blabla</p>
+            <p class="footer-info footer-info__text">blabla</p>
         </div>
     </footer>
 
