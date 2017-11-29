@@ -89,3 +89,27 @@ ul {
     font-weight: bold;
     font-size: 2rem;
 }
+
+.lookbook-row {
+    width: 100%;
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    margin: 3% 0;
+}
+
+.lookbook-row-sale {
+    flex-grow: 2;
+}
+
+.lookbook-row-pic-vertical {
+    flex-grow: 2;
+}
+
+.lookbook-row-phrases {
+    flex-grow: 1;
+}
+
+.lookbook-row-pic-horizontal {
+    flex-grow: 1;
+}
