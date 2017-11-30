@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 body, html {
@@ -15,6 +16,11 @@ a {
 
 ul {
     list-style-type: none;
+}
+
+.all-padding {
+    width: 100%;
+    padding: 0 10%;
 }
 
 .navbar {
@@ -66,7 +72,7 @@ ul {
 
 .lookbook {
     width: 100%;
-    padding: 4% 2%;
+    padding: 4% 0;
 }
 
 .lookbook-link {
@@ -93,23 +99,105 @@ ul {
 .lookbook-row {
     width: 100%;
     display: flex;
-    /* flex-direction: column; */
-    flex-wrap: wrap;
     margin: 3% 0;
+    align-items: center;
 }
 
 .lookbook-row-sale {
-    flex-grow: 2;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 5% 1%;
 }
 
-.lookbook-row-pic-vertical {
-    flex-grow: 2;
+.lookbook-row-sale__price {
+    padding: 0;
+    text-transform: uppercase;
+    color: #5a6cd8;
+    font-size: 1rem;
+}
+
+.lookbook-row-sale__icon {
+    width: 35%;
+    padding: 2% 0;
+}
+
+.lookbook-row-pic--vertical {
+    width: 100%;
+    padding: 0 1%;
+}
+
+.lookbook-row-pic--vertical__pic {
+    padding: 0;
 }
 
 .lookbook-row-phrases {
-    flex-grow: 1;
+    padding: 12% 1%;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Righteous', cursive;
+    font-size: 1.2rem;
 }
 
-.lookbook-row-pic-horizontal {
-    flex-grow: 1;
+.lookbook-row-phrases__text {
+    padding: 0;
+}
+
+.lookbook-row-phrases__line {
+    width: 25px;
+    height: 3px;
+    padding: 0;
+    margin: 2% auto 0 auto;
+    background: lightgray;
+}
+
+.lookbook-row-pic--horizontal {
+    width: 100%;
+    padding: 0 1%;
+}
+
+.lookbook-row-pic--horizontal__pic {
+    padding: 0;
+}
+
+.lookbook-row--flex-start {
+    align-items: flex-start;
+}
+
+.lookbook-row-pic--square__pic {
+    width: 100%;
+}
+
+.lookbook-row-phrases__text--square {
+    padding: 20% 0 2% 0;
+}
+
+.lookbook-row-phrases--blue {
+    /* height: 250px; */
+    margin: 0 1%;
+    background: #5a6cd8;
+    border: 15px solid #5a6cd8;
+    box-shadow: inset 0px 0px 0px 5px white;
+    padding: 8.5% 0;
+    color: white;
+    font-family: 'Righteous', cursive;
+    font-size: 1.2rem;
+}
+
+.lookbook-row-flex-wrap {
+    flex-wrap: wrap;
+}
+
+.lookbook-row-white-space {
+    width: 30%;
+    height: 230px;
+    background: black;
+}
+
+.lookbook-row-phrases--center {
+    width: 70%;
+}
+
+.lookbook-row-pic--horizontal--center {
+    width: 75%;
 }
