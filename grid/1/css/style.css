@@ -85,7 +85,7 @@ ul {
 
 .lookbook-title {
     display: block;
-    margin: 3% auto;
+    margin: 5% auto;
     text-align: center;
 }
 
@@ -181,7 +181,7 @@ ul {
     padding: 8.5% 0;
     color: white;
     font-family: 'Righteous', cursive;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
 }
 
 .lookbook-row-flex-wrap {
