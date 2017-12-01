@@ -1,12 +1,4 @@
 
-.row {
-    display: flex;
-    width: 100%;
-}
-
-.row:not(:first-of-type) {
-    margin-top: 1rem;
-}
 
 .col-tb-1 {
     width: 12.5%;

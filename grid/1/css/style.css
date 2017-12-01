@@ -96,8 +96,14 @@ ul {
     font-size: 2rem;
 }
 
-.lookbook-row {
-    
+.row {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.row:not(:first-of-type) {
+    margin-top: 1rem;
 }
 
 .lookbook-row-sale {
@@ -154,7 +160,7 @@ ul {
     padding: 0;
 }
 
-.lookbook-row--flex-start {
+.row--flex-start {
     align-items: flex-start;
 }
 
@@ -177,14 +183,8 @@ ul {
     font-size: 0.9rem;
 }
 
-.lookbook-row-flex-wrap {
+.row-flex-wrap {
     flex-wrap: wrap;
-}
-
-.lookbook-row-white-space {
-    width: 30%;
-    height: 230px;
-    background: black;
 }
 
 .lookbook-row-phrases--center {
