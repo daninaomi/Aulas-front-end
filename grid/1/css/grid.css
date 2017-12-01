@@ -30,3 +30,7 @@
 .col-tb-8 {
     width: 100%;
 }
+
+.pull-right {
+    float: right;
+}
