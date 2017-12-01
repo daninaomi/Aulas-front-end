@@ -1,4 +1,13 @@
 
+.row {
+    display: flex;
+    width: 100%;
+}
+
+.row:not(:first-of-type) {
+    margin-top: 1rem;
+}
+
 .col-tb-1 {
     width: 12.5%;
 }
@@ -31,6 +40,14 @@
     width: 100%;
 }
 
+.col-tb-offset-2 {
+    margin-left: calc(25% + 1rem);
+}
+
 .pull-right {
     float: right;
+}
+
+[class*="col-"]:not(:last-of-type) {
+    margin-right: 1rem;
 }
