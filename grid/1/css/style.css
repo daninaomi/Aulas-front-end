@@ -297,9 +297,6 @@ ul {
     border-radius: 100%;
     margin: 0 2%;
     padding: 3.5%;
-}
-
-.fa {
     color: black;
 }
 
@@ -347,4 +344,42 @@ ul {
 
 .footer-info__text--right {
     text-align: right;
+}
+
+.social-box {
+    width: 10%;
+    position: fixed;
+    right: 3%;
+    top: 50%;
+    border: 1px solid grey;
+    border-top: 20px solid #5a6cd8;
+    background: white;
+}
+
+.social-box__title {
+    width: 70%;
+    text-align: center;
+    font-size: .8rem;
+    margin: 25% auto;
+}
+
+.social-box-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.social-box-buttons__button {
+    width: 50%;
+    flex-direction: column;
+    padding: 15% 5%;
+    background: white;
+    border: 1px solid grey;
+}
+
+.social-box-buttons__button--face {
+    color: #3b5998;
+}
+
+.social-box-buttons__button--twitter {
+    color:  #00aced;
 }
