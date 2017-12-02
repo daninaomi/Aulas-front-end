@@ -39,14 +39,12 @@ ul {
 
 .navbar__logo {
     width: 25%;
-    text-align: center;
-    font-size: 2.5rem;
-    text-transform: uppercase;
 }
 
 .navbar-list {
     width: 25%;
     text-align: right;
+    font-size: 0.9rem;
 }
 
 .navbar__link {
