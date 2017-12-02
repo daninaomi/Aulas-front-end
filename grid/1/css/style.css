@@ -20,7 +20,7 @@ ul {
 
 .all-padding {
     width: 100%;
-    padding: 0 10%;
+    padding: 0 15%;
 }
 
 .navbar {
@@ -94,12 +94,18 @@ ul {
     text-transform: uppercase;
     font-weight: bold;
     font-size: 2rem;
+    margin: 0;
+}
+
+.lookbook-title__text {
+    margin: 0;
 }
 
 .row {
     display: flex;
     width: 100%;
     align-items: center;
+    justify-content: center;
 }
 
 .row:not(:first-of-type) {
@@ -133,7 +139,9 @@ ul {
 }
 
 .lookbook-row-phrases {
-    padding: 12% 1%;
+    /* height: 250px; */
+    padding: 17% 1%;
+    justify-content: center;
     text-align: center;
     text-transform: uppercase;
     font-family: 'Righteous', cursive;
@@ -173,24 +181,172 @@ ul {
 }
 
 .lookbook-row-phrases--blue {
-    /* height: 250px; */
     background: #5a6cd8;
     border: 15px solid #5a6cd8;
     box-shadow: inset 0px 0px 0px 5px white;
     padding: 8.5% 0;
+    margin-bottom: 1rem;
     color: white;
     font-family: 'Righteous', cursive;
     font-size: 0.9rem;
 }
 
-.row-flex-wrap {
-    flex-wrap: wrap;
+ #lookbook-row-box--nomargin {
+    margin-right: 0;
 }
 
-.lookbook-row-phrases--center {
+.lookbook-row--calc-col-4 {
     width: calc(((100% / 6) * 4) - 1rem)
 }
 
-.lookbook-row-pic--horizontal--center {
-    width: 75%;
+.lookbook-row-more {
+    width: 25%;
+    margin: 5% 0;
+}
+
+.lookbook-row-more__botao {
+    width: 100%;
+    padding: 5% 2%;
+    background: white;
+    border: 2px solid #5a6cd8;
+    text-transform: uppercase;
+    color: #5a6cd8;
+    font-size: 1rem;
+    font-weight: bold; 
+}
+
+.lookbook-row-dots {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+}
+
+.lookbook-row-dot {
+    width: 8px;
+    height: 8px;
+    margin: 0 2%;
+    border-radius: 100%;
+    background: gray;
+}
+
+.lookbook-back {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5%;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+}
+
+.lookbook-back__text {
+    width: 50%;
+    color: #5a6cd8;
+}
+
+.lookbook-back__up {
+    width: 30%;
+    text-align: right;
+}
+
+.footer {
+    background-image: url('../img/back-footer.jpg');
+    background-size: cover;
+    color: white;
+    position: relative;
+    padding-bottom: 5%;
+}
+
+.footer-sitemap {
+    width: 100%;
+    display: flex;
+    padding: 5% 0;
+    font-size: 0.8rem;
+}
+
+.footer-sitemap-area__title {
+    width: 100%;
+    color: #5a6cd8;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.footer-sitemap-area-list {
+    margin: 3% 0 15% 0;
+}
+
+.footer-sitemap-area-list__item {
+    margin: 2% 0;
+}
+
+.footer--left{
+    float: left;
+}
+
+.footer--right {
+    float: right;
+    margin-right: 40%;
+}
+
+.footer-sitemap-area-social {
+    display: flex;
+}
+
+.footer-sitemap-area-social__icon {
+    width: 30px;
+    height: 30px;
+    background: white;
+    border-radius: 100%;
+    margin: 0 2%;
+    padding: 3.5%;
+}
+
+.fa {
+    color: black;
+}
+
+.footer-sitemap-area__signature {
+    width: 20%;
+    position: absolute;
+    right: 18%;
+    top: 35%;
+}
+
+.footer-search {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5% auto;
+    border: none;
+}
+
+.footer-search__title {
+    width: 15%;
+    margin: 0 2%;
+}
+
+.footer-search__campo {
+    width: 70%;
+    margin: 0 0 0 3%;
+    padding: 2%;
+}
+
+.footer-search__botao {
+    width: 15%;
+    margin: 0 3% 0 0;
+    padding: 2%;
+}
+
+.footer-info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-info__text {
+    width: 40%;
+}
+
+.footer-info__text--right {
+    text-align: right;
 }
