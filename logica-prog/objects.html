@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>OBJECTS JS</h1>
+
+    <script>
+
+        // // EXEMPLO 1
+        // var car = {
+        //     cor: "prata",
+        //     qtdPortas: 4,
+        //     marca: "Fiat",
+        //     ac: true,
+        //     automatico: false,
+        //     ligar: function() {
+        //         alert("vrummmm");
+        //     }
+        // };
+
+        // console.log(car.ac);
+
+        // car.ligar();
+
+
+        // EXEMPLO 2
+        var operacao = {
+            result: null,
+            valor1: null,
+            valor2: null,
+
+            // somar: function (a,b) {
+            //     return a+b;
+            // },
+
+            somar: function () {
+                this.result = this.valor1 + this.valor2 ;
+                return this.result ;
+            },
+
+            iniciarValor: function (a,b) {
+                this.valor1 = a;
+                this.valor2 = b;
+            }
+        };
+
+        var x = 10;
+        var y = 15;
+
+        // document.write(operacao.somar(x,y));
+
+        operacao.iniciarValor(x,y);
+        console.log( operacao.somar() );
+    
+    </script>
+</body>
+</html>
