@@ -11,48 +11,87 @@
 
     <script>
     
-        // OUTRO EX
-        var mes = parseInt(prompt("digite número do mês"));
+        // // OUTRO EX
+        // var mes = parseInt(prompt("digite número do mês"));
 
-        switch (mes) {
-            case 1:
-                alert("Janeiro");
+        // switch (mes) {
+        //     case 1:
+        //         alert("Janeiro");
+        //         break;
+        //     case 2:
+        //         alert("Fevereiro");
+        //         break;
+        //     case 3:
+        //         alert("Março");
+        //         break;
+        //     case 4:
+        //         alert("Abril");
+        //         break;
+        //     case 5:
+        //         alert("Maio");
+        //         break;
+        //     case 6:
+        //         alert("Junho");
+        //         break;
+        //     case 7:
+        //         alert("Julho");
+        //         break;
+        //     case 8:
+        //         alert("Agosto");
+        //         break;
+        //     case 9:
+        //         alert("Setembro");
+        //         break;
+        //     case 10:
+        //         alert("Outubro");
+        //         break;
+        //     case 11:
+        //         alert("Novembro");
+        //         break;
+        //     case 12:
+        //         alert("Dezembro");
+        //         break;
+        //     default:
+        //         alert("digite entre 1 e 12");
+        //         break;
+        //     }
+
+        function soma(a,b) {
+            return a + b;
+        }
+
+        function subtrair(a,b) {
+            var resultado = a - b;
+            return resultado;
+        }
+
+        function multip(a,b) {
+            return a * b;
+        }
+
+        function divid(a,b) {
+            return a / b;
+        }
+
+        var x = parseInt(prompt("digite o primeiro num"));
+        var y = parseInt(prompt("digite o segundo num"));
+        var operacao = prompt("você quer: \nsomar, \nsubtrair, \nmultiplicar \nou dividir?");
+
+        switch (operacao) {
+            case "somar":
+                document.write( soma(x,y) );
                 break;
-            case 2:
-                alert("Fevereiro");
+            case "subtrair":
+                document.write( subtrair(x,y) );
                 break;
-            case 3:
-                alert("Março");
+            case "multiplicar":
+                document.write( multip(x,y) );
                 break;
-            case 4:
-                alert("Abril");
-                break;
-            case 5:
-                alert("Maio");
-                break;
-            case 6:
-                alert("Junho");
-                break;
-            case 7:
-                alert("Julho");
-                break;
-            case 8:
-                alert("Agosto");
-                break;
-            case 9:
-                alert("Setembro");
-                break;
-            case 10:
-                alert("Outubro");
-                break;
-            case 11:
-                alert("Novembro");
-                break;
-            case 12:
-                alert("Dezembro");
+            case "dividir":
+                document.write( divid(x,y) );
                 break;
             default:
-                alert("digite entre 1 e 12");
+                alert("digite somar, subtrair, multiplicar ou dividir");
                 break;
         }
 

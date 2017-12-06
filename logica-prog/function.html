@@ -26,24 +26,52 @@
         }
 
         function divid(a,b) {
-            return a / b;
+            if ( b == 0 ) {
+                return alert("não pode dividir por zero carai");
+            } else {
+                return a / b;
+            }
         }
 
         var x = parseInt(prompt("digite o primeiro num"));
         var y = parseInt(prompt("digite o segundo num"));
         var operacao = prompt("você quer: \nsomar, \nsubtrair, \nmultiplicar \nou dividir?");
 
-        if (operacao == "somar") {
-            document.write( soma(x,y) );
+        // if (operacao == "somar") {
+        //     document.write( soma(x,y) );
 
-        } else if (operacao == "subtrair") {
-            document.write( subtrair(x,y) );
+        // } else if (operacao == "subtrair") {
+        //     document.write( subtrair(x,y) );
 
-        } else if (operacao == "multiplicar") {
-            document.write( multip(x,y) );
+        // } else if (operacao == "multiplicar") {
+        //     document.write( multip(x,y) );
             
-        } else if (operacao == "dividir") {
-            document.write( divid(x,y) );
+        // } else if (operacao == "dividir") {
+        //     document.write( divid(x,y) );
+        // } else {
+        //     alert("digite somar, subtrair, multiplicar ou dividir");
+        // }
+
+        switch (operacao) {
+            case "somar":
+                document.write( soma(x,y) );
+                break;
+
+            case "subtrair":
+                document.write( subtrair(x,y) );
+                break;
+
+            case "multiplicar":
+                document.write( multip(x,y) );
+                break;
+
+            case "dividir":
+                document.write( divid(x,y) );
+                break;
+                
+            default:
+                alert("digite somar, subtrair, multiplicar ou dividir");
+                break;
         }
 
     </script>
