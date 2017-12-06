@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>FUNCTIONS JS</h1>
+
+    <script>
+
+        function soma(a,b) {
+            return a + b;
+        }
+
+        function subtrair(a,b) {
+            var resultado = a - b;
+            return resultado;
+        }
+
+        function multip(a,b) {
+            return a * b;
+        }
+
+        function divid(a,b) {
+            return a / b;
+        }
+
+        var x = parseInt(prompt("digite o primeiro num"));
+        var y = parseInt(prompt("digite o segundo num"));
+        var operacao = prompt("somar, \nsubtrair, \nmultiplicar \nou dividir?");
+
+        if (operacao == "somar") {
+            document.write( soma(x,y) );
+
+        } else if (operacao == "subtrair") {
+            document.write( subtrair(x,y) );
+
+        } else if (operacao == "multiplicar") {
+            document.write( multip(x,y) );
+            
+        } else if (operacao == "dividir") {
+            document.write( divid(x,y) );
+        }
+
+    </script>
+    
+</body>
+</html>
