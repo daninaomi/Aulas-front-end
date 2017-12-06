@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Lógica com JS</h1>
+
+    <script>
+        // EXEMPLO 1
+        // var a = prompt("digite numero");
+        // var b = prompt("digite outro num");
+
+        // a = parseInt(a); // ->> PARSE INT VIRA NUMERO INTEIRO
+        // b = parseInt(b);
+
+        // var resultado = a + b;
+
+        // console.log(resultado);
+
+        // EXEMPLO 2
+        // // ENTRADA
+        // var nome = prompt("digite seu nome");
+        // var peso = parseFloat(prompt("digite seu peso")); // ->> PARSE FLOAT CONSIDERA NUMERO DECIMAL
+        // var altura = prompt("digite sua altura");
+
+        // // PROCESSAMENTO
+        // altura = parseFloat(altura);
+
+        // var imc = peso / (altura*altura);
+
+        // // SAIDA
+        // console.log(nome + ", seu IMC é " + imc.toFixed(2)); // ->> TOFIXED() CONTA NUM DECIMAL ATE A CASA QUE COLOCOU ENTRE PARENTESES
+
+
+        // EXERCICIOS
+
+        // // EX 5
+        // var cm = parseFloat(prompt("digite os centimetros"));
+        // var inches = cm/2.5;
+
+        // console.log("esse valor em polegadas é " + inches);
+
+
+        // // EX 6
+        // var inches = parseFloat(prompt("digite as polegadas"));
+        // var cm = inches*2.5;
+
+        // console.log("esse valor em cm é " + cm);
+
+
+        // // EX 11
+        // var num = parseInt(prompt("digite um número"));
+
+        // if (num >= 0) {
+        //     console.log("positivo");
+        // } else {
+        //     console.log("negativo");
+        // }
+
+
+        // // EX 12
+        // var num = parseInt(prompt("digite um número"));
+        // var result = num % 2;
+
+        // if (result == 0) {
+        //     console.log("par");
+        // } else {
+        //     console.log("impar");
+        // }
+
+
+        // // EX 13
+        // var num = parseInt(prompt("digite um número"));
+        // var result = num % 2;
+
+        // if ( result == 0 ) {
+        //     console.log(num);
+        // } else {
+        //     console.log("");
+        // }
+
+
+        // // EX 14: Faça um programa que receba o preço de um produto e o seu código de origem e imprima a sua procedência, utilizando uma estrutura IF sem o ELSE, para cada item abaixo. A procedência obedece a seguinte tabela:
+        // // Código de Origem  -- Procedência
+        // // 1 -- Sul
+        // // 2 -- Norte
+        // // 3 -- Leste
+        // // 4 -- Oeste
+        // // 5 ou 6 -- Nordeste
+        // // 7,8 ou 9 -- Sudeste
+        // // 10 até 20 -- Centro-Oeste
+        // // 21 até 30 -- Sem definição
+
+        // var price = prompt("qual preço?");
+        // var code = parseInt(prompt("qual código de origem?"));
+
+        // if (code == 1) {
+        //     console.log("preço R$" + price + " de procedência do Sul");
+
+        // } else if (code == 2) {
+        //     console.log("preço R$" + price + " de procedência do Norte");
+
+        // } else if (code == 3) {
+        //     console.log("preço R$" + price + " de procedência do Leste");
+
+        // } else if (code == 4) {
+        //     console.log("preço R$" + price + " de procedência do Oeste");
+
+        // } else if ( code == 5 || code == 6) {
+        //     console.log("preço R$" + price + " de procedência do Nordeste");
+
+        // } else if (code >= 7 && code <= 9 ) {
+        //     console.log("preço R$" + price + " de procedência do Sudeste");
+
+        // } else if ( code >= 10 && code <= 20 ) {
+        //     console.log("preço R$" + price + " de procedência do Centro-Oeste");
+
+        // } else if ( code >= 21 && code <= 30 ) {
+        //     console.log("preço R$" + price + " de procedência sem definição");
+        // }
+
+        // // EX 16
+        // var cargo = prompt("qual seu cargo?");
+        // var salario = parseFloat(prompt("qual seu salário?"));
+
+        // if ( cargo == "Produção" ) {
+        //     var aumento = salario+(salario*0.065);
+        //     alert("seu novo salario é " + aumento);
+        // } else if ( cargo == "Administrativo" ) {
+        //     var aumento = salario+(salario*0.075);
+        //     alert("seu novo salario é " + aumento);
+        // } else if ( cargo == "Diretoria" ) {
+        //     var aumento = salario+(salario*0.12);
+        //     alert("seu novo salario é " + aumento);
+        // }
+
+        // // EX 17
+        // var num = parseInt(prompt("digite um número"));
+        // var res = num % 2;
+
+        // if (res == 0) {
+        //     document.write(num);
+        // } else {
+        //     alert("digite apenas números pares");
+        // }
+
+
+        // // EX 19
+        // var age = parseInt(prompt("qual sua idade?"));
+
+        // if (age <= 2) {
+        //     alert("Recém-nascido");
+        // } else if (age >= 3 && age <= 11) {
+        //     alert("Criança");
+        // } else if (age >= 12 && age <= 19) {
+        //     alert("Adolescente");
+        // } else if (age >= 20 && age <= 55) {
+        //     alert("Adulto");
+        // } else if (age >= 55) {
+        //     alert("Idoso");
+        // }
+
+
+        // // OUTRO EX
+        // var mes = parseInt(prompt("digite número do mês"));
+
+        // // if (num >= 1 && num <= 12) {
+        // //     if (num == 1) {
+        // //         document.write("Janeiro");
+        // //     } else if (num == 2) {
+        // //         document.write("Fevereiro");
+        // //     } else if (num == 3) {
+        // //         document.write("Março");
+        // //     } else if (num == 4) {
+        // //         document.write("Abril");
+        // //     } else if (num == 5) {
+        // //         document.write("Maio");
+        // //     } else if (num == 6) {
+        // //         document.write("Junho");
+        // //     } else if (num == 7) {
+        // //         document.write("Julho");
+        // //     } else if (num == 8) {
+        // //         document.write("Agosto");
+        // //     } else if (num == 9) {
+        // //         document.write("Setembro");
+        // //     } else if (num == 10) {
+        // //         document.write("Outubro");
+        // //     } else if (num == 11) {
+        // //         document.write("Novembro");
+        // //     } else if (num == 12) {
+        // //         document.write("Dezembro");
+        // //     }
+        // // } else {
+        // //     alert("digite entre 1 e 12");
+        // // }
+
+        // switch (mes) {
+        //     case 1:
+        //         alert("Janeiro");
+        //         break;
+        //     case 2:
+        //         alert("Fevereiro");
+        //         break;
+        //     case 3:
+        //         alert("Março");
+        //         break;
+        //     case 4:
+        //         alert("Abril");
+        //         break;
+        //     case 5:
+        //         alert("Maio");
+        //         break;
+        //     case 6:
+        //         alert("Junho");
+        //         break;
+        //     case 7:
+        //         alert("Julho");
+        //         break;
+        //     case 8:
+        //         alert("Agosto");
+        //         break;
+        //     case 9:
+        //         alert("Setembro");
+        //         break;
+        //     case 10:
+        //         alert("Outubro");
+        //         break;
+        //     case 11:
+        //         alert("Novembro");
+        //         break;
+        //     case 12:
+        //         alert("Dezembro");
+        //         break;
+        //     default:
+        //         alert("digite entre 1 e 12");
+        //         break;
+        // }
+
+
+        // // EX 20
+        // var nome = prompt("qual seu nome?");
+        // var salario = parseFloat(prompt("qual seu salário?"));
+        // var codigo = prompt("qual o código do seu cargo?");
+
+        // if (codigo == 1) {
+        //     cargo = "Escrituário";
+        //     aumento = salario * 0.5;
+        //     novoSalario = salario + aumento;
+        //     alert("Funcionário: " + nome + " Salário atual: " + salario + " Código: " + codigo + " Cargo: " + cargo + " Porcentual de aumento: " + aumento + "% Novo salário: " + novoSalario);
+
+        // } else if (codigo == 2) {
+        //     cargo = "Secretário";
+        //     aumento = salario * 0.35;
+        //     novoSalario = salario + aumento;
+        //     alert("Funcionário: " + nome + " Salário atual: " + salario + " Código: " + codigo + " Cargo: " + cargo + " Porcentual de aumento: " + aumento + "% Novo salário: " + novoSalario);
+
+        // } else if (codigo == 3) {
+        //     cargo = "Caixa";
+        //     aumento = salario * 0.2;
+        //     novoSalario = salario + aumento;
+        //     alert("Funcionário: " + nome + " Salário atual: " + salario + " Código: " + codigo + " Cargo: " + cargo + " Porcentual de aumento: " + aumento + "% Novo salário: " + novoSalario);
+
+        // } else if (codigo == 4) {
+        //     cargo = "Gerente";
+        //     aumento = salario * 0.1;
+        //     novoSalario = salario + aumento;
+        //     alert("Funcionário: " + nome + " Salário atual: " + salario + " Código: " + codigo + " Cargo: " + cargo + " Porcentual de aumento: " + aumento + "% Novo salário: " + novoSalario);
+
+        // } else if (codigo == 5) {
+        //     cargo = "Diretor";
+        //     aumento = 0;
+        //     novoSalario = "Não tem aumento";
+        //     alert("Funcionário: " + nome + " Salário atual: " + salario + " Código: " + codigo + " Cargo: " + cargo + " Porcentual de aumento: " + aumento + "% Novo salário: " + novoSalario);
+        // }
+
+    </script>
+</body>
+
+</html>
