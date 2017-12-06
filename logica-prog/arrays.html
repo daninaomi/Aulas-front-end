@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ARRAYS</h1>
+
+    <script>
+    
+    // EXEMPLOS
+    // var nomes = [
+    //     "nome",
+    //     "nome2",
+    //     "nome3",
+    //     "nome4",
+    //     prompt("digite um nome")
+    // ];
+
+    // var nomes = [];
+
+    // for (var i = 0; i <= 4; i++) {
+    //     nomes[i] = prompt("digite um nome");
+    // }
+
+    // console.log(nomes);
+
+
+    // // EXEMPLO FRUTAS
+    // var produto = [];
+
+    // var goiaba = {
+    //     descrip: "verde",
+    //     price: 5
+    // }
+
+    // var abacate = {
+    //     descrip: "pequeno",
+    //     price: 7
+    // }
+
+    // produto.push(goiaba);
+    // produto.push(abacate);
+
+    // for (var i = 0; i <= 1; i++) {
+    //     document.write(produto[i].descrip);
+    //     document.write(produto[i].price);
+    // }
+    
+
+    // // EXERCICIO 
+    // var numeros = [];
+
+    // for (var i = 0; i <= 4; i++) {
+
+    //     numeros[i] = parseFloat(prompt("digite um numero"));
+
+    //     if ( numeros[i] % 2 == 0) {
+    //         numeros[i] = numeros[i] * 2;
+    //     }
+    // }
+
+
+    // // EX 37
+    // var numeros = [];
+    // var contador = 0;
+
+    // while ( contador <= 9 ) {
+    //     numeros[contador] = parseInt(prompt("digite um numero"));
+
+    //     if (numeros[contador] % 2 == 0) {
+    //         contador++;
+    //     } else {
+    //         alert("digite um numero par");
+    //     }
+    // }
+
+    // for ( x = 0; x <= 10; x++ ){
+    //     document.write(numeros);
+    // }
+
+
+    // EX 38
+    var numeros = [];
+    var contadorPar = 0;
+    var contadorImpar = 0;
+    var contador = 0;
+
+    while ( contador <= 6 ) {
+        numeros[contador] = parseInt(prompt("digite um numero"));
+
+        if (numeros[contador] % 2 == 0) {
+            contadorPar++;
+        } else {
+            contadorImpar++;
+        }
+        contador++;
+    }
+
+    document.write("numeros pares" + contadorPar);
+    document.write("numeros impares" + contadorImpar);
+
+    </script>
+</body>
+</html>
