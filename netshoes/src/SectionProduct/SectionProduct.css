@@ -1,0 +1,7 @@
+.section-products {
+    margin: 2%;
+}
+
+.section-product__cards {
+    display: flex;
+}
