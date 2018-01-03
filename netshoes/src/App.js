@@ -37,7 +37,7 @@ var products = [
   }
 ];
 
-console.log(products);
+
 export default () => (
   <div className="App">
     <SectionProduct title="Relogios Caros Bagarai" products={products}/>
