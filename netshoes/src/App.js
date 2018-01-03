@@ -1,38 +1,41 @@
 import React from 'react';
-import SectionProduct from "./SectionProduct/SectionProduct";
-import Relogio from "./img/relogiocasio.jpg";
+import SectionProduct from "./components/SectionProduct/SectionProduct";
+import Note1 from "./img/note-1.png";
+import Note2 from "./img/note-2.png";
+import TV1 from "./img/tv-1.png";
+import TV2 from "./img/tv-2.png";
 
 var products = [
   {
-    name: "Relógio Cronógrafo",
+    name: "Notebook",
     price: 1745.20,
     image: {
-      src: Relogio,
-      alt: "Relógio Dourado"
+      src: Note1,
+      alt: "Notebook"
     }
   },
   {
-    name: "Relógio Cronógrafo",
-    price: 1745.20,
+    name: "Notebook",
+    price: 2000.90,
     image: {
-      src: Relogio,
-      alt: "Relógio Dourado"
+      src: Note2,
+      alt: "Notebook"
     }
   },
   {
-    name: "Relógio Cronógrafo",
-    price: 1745.20,
+    name: "TV",
+    price: 3745.20,
     image: {
-      src: Relogio,
-      alt: "Relógio Dourado"
+      src: TV1,
+      alt: "Televisão"
     }
   },
   {
-    name: "Relógio Cronógrafo",
-    price: 1745.20,
+    name: "TV",
+    price: 2500.90,
     image: {
-      src: Relogio,
-      alt: "Relógio Dourado"
+      src: TV2,
+      alt: "Televisão"
     }
   }
 ];
@@ -40,7 +43,6 @@ var products = [
 
 export default () => (
   <div className="App">
-    <SectionProduct title="Relogios Caros Bagarai" products={products}/>
+    <SectionProduct title="Produtos em promoção" products={products} />
   </div>
 );
-
