@@ -19,6 +19,7 @@ import TopoHome from "./img/topo-home.png";
 import TV1 from "./img/tv-1.png";
 import TV2 from "./img/tv-2.png";
 
+
 var products = [
   {
     name: "Notebook",
