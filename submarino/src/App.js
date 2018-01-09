@@ -1,5 +1,7 @@
 import React from 'react';
-import SectionProduct from "./components/SectionProduct/SectionProduct";
+import SectionProduct from "./SectionProduct/SectionProduct";
+import NavHeader from "./NavHeader/NavHeader";
+
 import Ad1 from "./img/ad-1.png";
 import Ad2 from "./img/ad-2.png";
 import Ad3 from "./img/ad-3.png";
@@ -9,15 +11,17 @@ import Book2 from "./img/book-2.jpg";
 import Certificate from "./img/certificado.gif";
 import Game1 from "./img/game-1.png";
 import HD1 from "./img/hd-1.png";
-import Logo from "./img/logo.gif";
+
+
+
 import Note1 from "./img/note-1.png";
 import Note2 from "./img/note-2.png";
 import Phone1 from "./img/phone-1.png";
-import Relogio from "./img/relogio.jpg";
 import Topinho from "./img/topinho.png";
 import TopoHome from "./img/topo-home.png";
 import TV1 from "./img/tv-1.png";
 import TV2 from "./img/tv-2.png";
+
 
 
 var products = [
@@ -55,9 +59,15 @@ var products = [
   }
 ];
 
+// var navHeaderImages =  {
+//   src: IconMenu,
+//   alt: "Ícone de Menu",
+//   title : "icone menu"
+// }
 
 export default () => (
   <div className="App">
+    <NavHeader />
     <SectionProduct title="Produtos em promoção" products={products} />
   </div>
 );

@@ -1,0 +1,30 @@
+.nav-header {
+    width: 100%;
+    padding: 2%;
+    background: #00ADEF;
+}
+
+.nav-header__menu {
+    width: 40px;
+}
+
+.logo {
+    width: 40px;
+}
+
+.nav-header__profile {
+    width: 40px;
+}
+
+.nav-header__cart {
+    width: 40px;
+}
+
+.nav-header__search-bar {
+    width: 100%;
+    background: white;
+}
+
+.nav-header__search {
+
+}
