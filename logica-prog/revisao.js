@@ -42,7 +42,10 @@ function cadastrarCliente() {
     // txt += "</p>";
 
     // document.getElementById('resultado').innerHTML = txt;
+
+    listarCliente();
 }
+
 
 function listarCliente() {
 
