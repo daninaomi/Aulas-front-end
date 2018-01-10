@@ -9,7 +9,6 @@ function cadastrarCliente() {
     // var idade = document.getElementById('idade').value;
     // var resultado;
 
-
     // if (idade >= 18) {
     //     resultado = 'maior de idade';
     // } else {
@@ -33,9 +32,7 @@ function cadastrarCliente() {
         objNome.value = '';
         objIdade.value = '';
 
-    // console.log(clientes);
-
-    for ????
+    console.log(clientes);
 
     // document.getElementById('resultado').innerHTML = "<p>"+resultado+"<p>";
 
@@ -45,4 +42,26 @@ function cadastrarCliente() {
     // txt += "</p>";
 
     // document.getElementById('resultado').innerHTML = txt;
+}
+
+function listarCliente() {
+
+    event.preventDefault();
+
+    var listarCliente = "";
+
+    for ( var x = 0 ; x < clientes.length ; x++ ) {
+
+        listarCliente += "<p>Nome: ";
+        listarCliente += clientes[x].nome;
+        listarCliente += "<br>Idade: ";
+        listarCliente += clientes[x].idade;
+        listarCliente += "</p>";
+    
+    }
+
+    // console.log(listarCliente);
+    
+    document.getElementById('resultado').innerHTML = listarCliente;
+
 }

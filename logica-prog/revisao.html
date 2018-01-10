@@ -4,7 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Telinha de cadastro</title>
+    <style>
+        form {
+            padding: 2%;
+        }
+
+        input, button {
+            margin-bottom: 5%;
+        }
+
+        button {
+            padding: 2%;
+            background: lightcoral;
+            border: none;
+            margin-right: 2%;
+        }
+    </style>
 </head>
 
 <body>
@@ -19,7 +35,12 @@
         <input id="idade" name="idade" type="number" placeholder="seus aninhos">
 
         <br>
-        <button id="validar" onclick="cadastrarCliente()">Validar</button>
+
+        <button id="cadastrar" onclick="cadastrarCliente()">Cadastrar</button>
+
+        <button id="listar" onclick="listarCliente()">Listar</button>
+
+        <button id="limpar" onclick="limpar()">Limpar</button>
     </form>
 
     <div id="resultado"></div>
