@@ -9,7 +9,8 @@ var produtos = [
         image: {
             src: '"img/shirt.jpg"',
             alt: "purple shirt"
-        }
+        },
+        cod: 11
     },
 
     {   
@@ -21,7 +22,8 @@ var produtos = [
         image: {
             src: '"img/shoes.jpg"',
             alt: "running shoes"
-        }
+        },
+        cod: 12
     },
 
     {   
@@ -33,7 +35,8 @@ var produtos = [
         image: {
             src: '"img/jacket.jpg"',
             alt: "blue jacket"
-        }
+        },
+        cod: 13
     },
 ];
 
@@ -52,8 +55,8 @@ function listarProdutos() {
         listarProdutos += '<td class="shop-cart-produto-description"> <div class="shop-cart-produto__name"> ' + produtos[x].name + '</div>';
         listarProdutos += '<div class="shop-cart-produto__details">' + '<br> COLOR: ' + produtos[x].color + ' SIZE: ' + produtos[x].size + ' </div> </td>';
         listarProdutos += '<td class="shop-cart-produto__price"> $' + produtos[x].price + ' x   </td>';
-        listarProdutos += '<td> <input class="shop-cart-produto__qty" type="number" value="' + produtos[x].qty + '"> =   </td>';
-        listarProdutos += '<td class="shop-cart-produto__total"> $' + produtos[x].price * produtos[x].qty + '</td> </tr> ';
+        listarProdutos += '<td> <input onchange="atualizarQty(this.id, this.value)" class="shop-cart-produto__qty" type="number" value="' + produtos[x].qty + '" id="' + produtos[x].cod + '"> =   </td>';
+        listarProdutos += '<td class="shop-cart-produto__total" id="total-' + produtos[x].cod + '"> $' + produtos[x].price * produtos[x].qty + '</td> </tr> ';
 
         subtotal += (produtos[x].price * produtos[x].qty);
     }
@@ -63,6 +66,25 @@ function listarProdutos() {
     document.getElementById('subtotal').innerHTML = subtotal;
 
 }
+
+function atualizarQty(_cod, _qty) {
+    
+    for (var x = 0; x < produtos.length; x++) {
+
+        if ( produtos[x].cod == _cod ) {
+            
+            produtos[x].qty = _qty;
+
+            var totalProduto = produtos[x].price * produtos[x].qty;
+            var codProd = 'total-'+ produtos[x].cod;
+
+            document.getElementById(codProd).innerHTML = "R$ " + totalProduto;
+
+            break;
+        }
+    }
+}
+
 
 // var dados = [
 //     {
