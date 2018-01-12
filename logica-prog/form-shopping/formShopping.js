@@ -2,8 +2,8 @@ var produtos = [
 
     {   
         name: "Puma Golf Raglan Tech Polo Tee",
-        color: "purple",
-        size: "xxl",
+        color: '<div class="color color-purple"></div>',
+        size: "XXL",
         price: 72,
         qty: 3,
         image: {
@@ -14,7 +14,7 @@ var produtos = [
 
     {   
         name: "Nike Men's Running Shoes",
-        color: "orange",
+        color: '<div class="color color-orange"></div>',
         size: "43",
         price: 129,
         qty: 1,
@@ -26,8 +26,8 @@ var produtos = [
 
     {   
         name: "DC Men's Axis Snowboard Jacket",
-        color: "blue",
-        size: "s",
+        color: '<div class="color color-blue"></div>',
+        size: "S",
         price: 89,
         qty: 2,
         image: {
@@ -42,26 +42,54 @@ function listarProdutos() {
     event.preventDefault();
 
     var listarProdutos = "";
-    var subtotal = "";
+    var subtotal = 0;
 
     for (var x = 0; x < produtos.length; x++) {
 
-        listarProdutos += ' <tr class="shop-cart-items-produto">';
-        listarProdutos += '<td class="shop-cart-items-produto__cancel"> <img src="img/cancel.png" alt="cancel" /> </td>'
-        listarProdutos += '<td class="shop-cart-items-produto__img"> <img src=' + produtos[x].image.src + '/> </td>'
-        listarProdutos += '<td class="shop-cart-items-produto-description"> <div class="shop-cart-items-produto__name"> ' + produtos[x].name + '</div>';
-        listarProdutos += '<div class="shop-cart-items-produto__details">' + '<br> COLOR: ' + produtos[x].color + ' SIZE: ' + produtos[x].size + ' </div> </td>';
-        listarProdutos += '<td class="shop-cart-items-produto__price"> $' + produtos[x].price + ' </td>';
-        listarProdutos += '<td class="shop-cart-items-produto__qty">' + produtos[x].qty + ' </td>';
-        listarProdutos += '<td class="shop-cart-items-produto__total">' + produtos[x].price * produtos[x].qty + '</td> </tr> ';
+        listarProdutos += ' <tr class="shop-cart-produto">';
+        listarProdutos += '<td class="shop-cart-produto__cancel"> <img src="img/cancel.png" alt="cancel" /> </td>'
+        listarProdutos += '<td class="shop-cart-produto__img"> <img src=' + produtos[x].image.src + '/> </td>'
+        listarProdutos += '<td class="shop-cart-produto-description"> <div class="shop-cart-produto__name"> ' + produtos[x].name + '</div>';
+        listarProdutos += '<div class="shop-cart-produto__details">' + '<br> COLOR: ' + produtos[x].color + ' SIZE: ' + produtos[x].size + ' </div> </td>';
+        listarProdutos += '<td class="shop-cart-produto__price"> $' + produtos[x].price + ' x   </td>';
+        listarProdutos += '<td> <input class="shop-cart-produto__qty" type="number" value="' + produtos[x].qty + '"> =   </td>';
+        listarProdutos += '<td class="shop-cart-produto__total"> $' + produtos[x].price * produtos[x].qty + '</td> </tr> ';
 
-        subtotal = x * (produtos[x].price * produtos[x].qty);
+        subtotal += (produtos[x].price * produtos[x].qty);
     }
 
     document.getElementById('produtos').innerHTML = listarProdutos;
+    
     document.getElementById('subtotal').innerHTML = subtotal;
 
 }
+
+// var dados = [
+//     {
+//         name: "Country"
+//     },
+//     {
+//         name: "City"
+//     },
+//     {
+//         name: "State/Region/Province"
+//     }
+// ];
+
+// function dadosForm() {
+
+//     event.preventDefault();
+
+//     var dadosForm = "";
+
+//     for (var x = 0; x < produtos.length; x++) {
+
+//         dadosForm += '<input type="text" placeholder="' + dados[x].name + '" >';
+//     }
+
+//     document.getElementById('dados').innerHTML = dadosForm;
+
+// }
 
 
 // document.getElementById('produto1name').innerHTML = produtos[0].name ;

@@ -6,32 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
     <link rel="stylesheet" href="formShopping.css">
 </head>
 
 <body onload="listarProdutos()">
     <section class="shop-box">
         <ul class="shop-box-etapas">
-            <li class="shop-box-etapas__title shop-box-etapas__title--pink">1 Shopping Cart</li>
-            <li class="shop-box-etapas__title">2 Shipping Info</li>
-            <li class="shop-box-etapas__title">3 Payment Method</li>
+            <li class="shop-box-etapas__title shop-box-etapas__title--pink"><div class="circulo">1</div>  Shopping Cart</li>
+            <li class="shop-box-etapas__title"><div class="circulo">2</div>  Shipping Info</li>
+            <li class="shop-box-etapas__title"><div class="circulo">3</div>  Payment Method</li>
         </ul>
 
-        <p>You have 3 items in your order</p>
+        <p class="shop-box__text">You have 3 items in your order</p>
 
-        <ul class="shop-box-titles">
-            <li>Name</li>
-            <li>Price</li>
-            <li>Quantity</li>
-            <li>Total</li>
+        <ul class="shop-cart-titles">
+            <li class="shop-cart-titles__item">Name</li>
+            <li class="shop-cart-titles__item">Price</li>
+            <li class="shop-cart-titles__item">Quantity</li>
+            <li class="shop-cart-titles__item">Total</li>
         </ul>
 
-        <!-- <div id="produtos"></div> -->
-        <table class="shop-cart-items" id="produtos"></table>
+        <table class="shop-cart" id="produtos"></table>
 
         <h3 class="shop-cart__subtotal">Subtotal:
             <p id="subtotal"></p>
         </h3>
+
+        <div class="shop-box-back">
+            <img class="shop-box-back__icon" src="img/back.png" alt="back">
+            <h2 class="shop-box-back__text">Continue Shopping</h2>
+        </div>
 
         <button id="closeCart" onclick="closeCart()" class="shop-box__button">Shipping Info</button>
         
@@ -39,9 +44,27 @@
     </section>
 
 
-    <section class="shop-box">
+    <!-- <section class="shop-box">
 
-    </section>
+        <ul class="shop-box-etapas">
+            <li class="shop-box-etapas__title"><div class="circulo">1</div>  Shopping Cart</li>
+            <li class="shop-box-etapas__title shop-box-etapas__title--orange"><div class="circulo">2</div>  Shipping Info</li>
+            <li class="shop-box-etapas__title"><div class="circulo">3</div>  Payment Method</li>
+        </ul>
+
+        <form action="" onload="dadosForm()">
+            <div>
+                <h2>Shipping Address</h2>
+                <div id="dados"></div>
+            </div>
+
+            <div>
+                <h2>Contact Info</h2>
+                <div></div>
+            </div>
+        </form>
+
+    </section> -->
 
 
     <script src="formShopping.js"></script>
