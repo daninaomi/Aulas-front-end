@@ -2,36 +2,36 @@ var produtos = [
 
     {   
         name: "Puma Golf Raglan Tech Polo Tee",
-        price: 72,
-        qty: 3,
         color: "purple",
         size: "xxl",
+        price: 72,
+        qty: 3,
         image: {
-            src: "shirt.jpg",
+            src: '"img/shirt.jpg"',
             alt: "purple shirt"
         }
     },
 
     {   
         name: "Nike Men's Running Shoes",
-        price: 129,
-        qty: 1,
         color: "orange",
         size: "43",
+        price: 129,
+        qty: 1,
         image: {
-            src: "shoes.jpg",
+            src: '"img/shoes.jpg"',
             alt: "running shoes"
         }
     },
 
     {   
         name: "DC Men's Axis Snowboard Jacket",
-        price: 89,
-        qty: 2,
         color: "blue",
         size: "s",
+        price: 89,
+        qty: 2,
         image: {
-            src: "jacket.jpg",
+            src: '"img/jacket.jpg"',
             alt: "blue jacket"
         }
     },
@@ -47,33 +47,26 @@ var total = {
 };
 
 
-document.getElementById('produto1name').innerHTML = produtos[0].name ;
-document.getElementById('produto1price').innerHTML = " $ " + produtos[0].price ;
-document.getElementById('produto1qty').innerHTML = " " + produtos[0].qty ;
-document.getElementById('produto1color').innerHTML = produtos[0].color ;
-document.getElementById('produto1size').innerHTML = produtos[0].size;
-document.getElementById('produto1img').innerHTML = produtos[0].image;
-document.getElementById('produto1total').innerHTML = " $" + total.produto1;
+// document.getElementById('produto1name').innerHTML = produtos[0].name ;
+// document.getElementById('produto1descrip').innerHTML = "Color: " + produtos[0].color + " Size: " + produtos[0].size;
+// document.getElementById('produto1price').innerHTML = " $ " + produtos[0].price ;
+// document.getElementById('produto1qty').innerHTML = " " + produtos[0].qty ;
+// document.getElementById('produto1img').innerHTML = " <img src=" + produtos[0].image.src + "/>";
+// document.getElementById('produto1total').innerHTML = " $" + total.produto1;
 
-document.getElementById('produto2name').innerHTML = produtos[1].name;
-document.getElementById('produto2price').innerHTML = " $ " + produtos[1].price;
-document.getElementById('produto2qty').innerHTML = " " + produtos[1].qty;
-document.getElementById('produto2color').innerHTML = produtos[1].color;
-document.getElementById('produto2size').innerHTML = produtos[1].size;
-document.getElementById('produto2img').innerHTML = produtos[1].image;
-document.getElementById('produto2total').innerHTML = " $" + total.produto1;
+// document.getElementById('produto2name').innerHTML = produtos[1].name;
+// document.getElementById('produto2descrip').innerHTML = "Color: " + produtos[1].color + " Size: " + produtos[1].size;
+// document.getElementById('produto2price').innerHTML = " $ " + produtos[1].price;
+// document.getElementById('produto2qty').innerHTML = " " + produtos[1].qty;
+// document.getElementById('produto2img').innerHTML = " <img src=" + produtos[1].image.src + "/>";
+// document.getElementById('produto2total').innerHTML = " $" + total.produto1;
 
-document.getElementById('produto3name').innerHTML = produtos[2].name;
-document.getElementById('produto3price').innerHTML = " $ " + produtos[2].price;
-document.getElementById('produto3qty').innerHTML = " " + produtos[2].qty;
-document.getElementById('produto3color').innerHTML = produtos[2].color;
-document.getElementById('produto3size').innerHTML = produtos[2].size;
-document.getElementById('produto3img').innerHTML = produtos[2].image;
-document.getElementById('produto3total').innerHTML = " $" + total.produto1;
-
-// document.getElementById('produto2').innerHTML = produtos[1].name + " $ " + produtos[1].price + " " + produtos[1].qty + " $" + total.produto2 ;
-
-// document.getElementById('produto3').innerHTML = produtos[2].name + " $ " + produtos[2].price + " " + produtos[2].qty + " $" + total.produto3 ;
+// document.getElementById('produto3name').innerHTML = produtos[2].name;
+// document.getElementById('produto3descrip').innerHTML = "Color: " + produtos[2].color + " Size: " + produtos[2].size;
+// document.getElementById('produto3price').innerHTML = " $ " + produtos[2].price;
+// document.getElementById('produto3qty').innerHTML = " " + produtos[2].qty;
+// document.getElementById('produto3img').innerHTML = " <img src=" + produtos[2].image.src + "/>";
+// document.getElementById('produto3total').innerHTML = " $" + total.produto1;
 
 
 var subtotal = total.produto1 + total.produto2 + total.produto3;
@@ -81,3 +74,20 @@ var subtotal = total.produto1 + total.produto2 + total.produto3;
 document.getElementById('subtotal').innerHTML = subtotal;
 
 
+function listarProdutos() {
+
+    event.preventDefault();
+
+    var listarProdutos = "";
+
+    for ( var x = 0 ; x < produtos.length ; x++ ) {
+
+        listarProdutos += '<tr class="shop-cart-items-produto">';
+        listarProdutos += '<td> <img class="shop-cart-items-produto__cancel" src="img/cancel.png" alt="cancel"> </td>'
+        listarProdutos += ' <img src=' + produtos[x].image.src + 'class="shop-cart-items-produto__img" />' 
+        listarProdutos += '<div class="shop-cart-items-produto-description"> <td ' + produtos[x].name + ' class="shop-cart-items-produto__name"> </td>' + 
+        listarProdutos += '<td ' + produtos[x].color +  'class="shop-cart-items-produto__details">Color: </td>' + Size: ' + produtos[x].size + ' $ ' + produtos[x].price + ' ' + produtos[x].qty + ' $' + total;
+    }
+
+    document.getElementById('produtos').innerHTML = listarProdutos;
+}

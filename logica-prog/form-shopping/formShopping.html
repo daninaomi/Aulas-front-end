@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="formShopping.css">
 </head>
 
-<body>
+<body onload="listarProdutos()">
     <section class="shop-box">
         <ul class="shop-box-etapas">
             <li class="shop-box-etapas__title shop-box-etapas__title--pink">1 Shopping Cart</li>
@@ -28,43 +28,58 @@
 
         <!-- <form class="shop-cart" action=""> -->
 
-            <table class="shop-cart-items">
-                <tr class="shop-cart-items-produto">
-                    <td id="produto1img" class="shop-cart-items-produto__img"></td>
+        <table class="shop-cart-items">
+            <tr id="produtos"></tr>
+            <tr id="produtos"></tr>
+            <tr id="produtos"></tr>
+            <!-- <tr class="shop-cart-items-produto">
+                <td>
+                    <img class="shop-cart-items-produto__cancel" src="img/cancel.png" alt="cancel">
+                </td>
+                <td id="produto1img" class="shop-cart-items-produto__img"></td>
+                <div class="shop-cart-items-produto-description">
                     <td id="produto1name" class="shop-cart-items-produto__name"></td>
-                    <td id="produto1price" class="shop-cart-items-produto__price"></td>
-                    <td id="produto1qty" class="shop-cart-items-produto__qty"></td>
-                    <td id="produto1color" class="shop-cart-items-produto__color"></td>
-                    <td id="produto1size" class="shop-cart-items-produto__size"></td>
-                    <td id="produto1total" class="shop-cart-items-produto__total"></td>
-                </tr>
+                    <td id="produto1descrip" class="shop-cart-items-produto__details"></td>
+                </div>
+                <td id="produto1price" class="shop-cart-items-produto__price"></td>
+                <td id="produto1qty" class="shop-cart-items-produto__qty"></td>
+                <td id="produto1total" class="shop-cart-items-produto__total"></td>
+            </tr>
 
-                <tr class="shop-cart-items-produto">
-                    <td id="produto2img" class="shop-cart-items-produto__img"></td>
+            <tr class="shop-cart-items-produto">
+                <td>
+                    <img class="shop-cart-items-produto__cancel" src="img/cancel.png" alt="cancel">
+                </td>
+                <td id="produto2img" class="shop-cart-items-produto__img"></td>
+                <div class="shop-cart-items-produto-description">
                     <td id="produto2name" class="shop-cart-items-produto__name"></td>
-                    <td id="produto2price" class="shop-cart-items-produto__price"></td>
-                    <td id="produto2qty" class="shop-cart-items-produto__qty"></td>
-                    <td id="produto2color" class="shop-cart-items-produto__color"></td>
-                    <td id="produto2size" class="shop-cart-items-produto__size"></td>
-                    <td id="produto2total" class="shop-cart-items-produto__total"></td>
-                </tr>
+                    <td id="produto2descrip" class="shop-cart-items-produto__details"></td>
+                </div>
+                <td id="produto2price" class="shop-cart-items-produto__price"></td>
+                <td id="produto2qty" class="shop-cart-items-produto__qty"></td>
+                <td id="produto2total" class="shop-cart-items-produto__total"></td>
+            </tr>
 
-                <tr class="shop-cart-items-produto">
-                    <td id="produto3img" class="shop-cart-items-produto__img"></td>
+            <tr class="shop-cart-items-produto">
+                <td>
+                    <img class="shop-cart-items-produto__cancel" src="img/cancel.png" alt="cancel">
+                </td>
+                <td id="produto3img" class="shop-cart-items-produto__img"></td>
+                <div class="shop-cart-items-produto-description">
                     <td id="produto3name" class="shop-cart-items-produto__name"></td>
-                    <td id="produto3price" class="shop-cart-items-produto__price"></td>
-                    <td id="produto3qty" class="shop-cart-items-produto__qty"></td>
-                    <td id="produto3color" class="shop-cart-items-produto__color"></td>
-                    <td id="produto3size" class="shop-cart-items-produto__size"></td>
-                    <td id="produto3total" class="shop-cart-items-produto__total"></td>
-                </tr>
-            </table>
+                    <td id="produto3descrip" class="shop-cart-items-produto__details"></td>
+                </div>
+                <td id="produto3price" class="shop-cart-items-produto__price"></td>
+                <td id="produto3qty" class="shop-cart-items-produto__qty"></td>
+                <td id="produto3total" class="shop-cart-items-produto__total"></td>
+            </tr> -->
+        </table>
 
-            <h3 class="shop-cart__subtotal">Subtotal:
-                <p id="subtotal"></p>
-            </h3>
+        <h3 class="shop-cart__subtotal">Subtotal:
+            <p id="subtotal"></p>
+        </h3>
 
-            <button id="closeCart" onclick="closeCart()" class="shop-box__button">Shipping Info</button>
+        <button id="closeCart" onclick="closeCart()" class="shop-box__button">Shipping Info</button>
         <!-- </form> -->
 
     </section>

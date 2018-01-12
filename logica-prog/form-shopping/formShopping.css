@@ -55,50 +55,45 @@ body, html {
 .shop-cart-items-produto {
     width: 100%;
     /* NAO TA PEGANDO O POSITION AQUIIIIIIIIIIIIIII */
-    position: relative; 
-    /* display: flex; */
-    /* flex-wrap: nowrap; */
     margin: 3% 0;
     padding: 3% 0;
     border-top: 1px solid lightgray;
     border-bottom: 1px solid lightgray;
 }
 
-.shop-cart-items-produto__img {
-    /* position: absolute; */
-    left: 2%;
+.shop-cart-items-produto__cancel {
+    width: 20px;
+    margin-right: 20px;
+}
+
+.shop-cart-items-produto__img img {
+    width: 70px;
+    height: 80px;
+}
+
+.shop-cart-items-produto-description {
+    display: block;
+    text-align: left;
 }
 
 .shop-cart-items-produto__name {
-    /* position: absolute; */
     left: 5%;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 .shop-cart-items-produto__price {
-    /* position: absolute; */
     margin-left: 6%;
 }
 
 .shop-cart-items-produto__qty {
-    /* position: absolute; */
 
 }
 
-.shop-cart-items-produto__color {
-    position: absolute;
-    left: 5%;
-    top: 5%;
-}
-
-.shop-cart-items-produto__size {
-    position: absolute;
-    left: 9%;
-    top: 5%;
+.shop-cart-items-produto__details {
+    font-size: 0.7rem;
 }
 
 .shop-cart-items-produto__total {
-    /* position: absolute; */
     right: 5%;
 }
 
