@@ -22,11 +22,12 @@ body, html {
 .shop-box-etapas {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     margin-bottom: 5%;
 }
 
 .shop-box-etapas__title {
+    width: calc(100%/3);
     padding: 3%;
     border: 1px solid lightgray;
 }
@@ -54,35 +55,43 @@ body, html {
 
 .shop-cart-items-produto {
     width: 100%;
-    /* NAO TA PEGANDO O POSITION AQUIIIIIIIIIIIIIII */
     margin: 3% 0;
     padding: 3% 0;
-    border-top: 1px solid lightgray;
-    border-bottom: 1px solid lightgray;
+    border-top: 2px solid lightgray;
+    border-bottom: 2px solid lightgray;
 }
 
 .shop-cart-items-produto__cancel {
     width: 20px;
-    margin-right: 20px;
+}
+
+.shop-cart-items-produto__cancel img {
+    width: 20px;
+}
+
+.shop-cart-items-produto__img {
+    width: 70px;
+    margin-left: 10px;
 }
 
 .shop-cart-items-produto__img img {
-    width: 70px;
+    width: 60px;
     height: 80px;
 }
 
 .shop-cart-items-produto-description {
     display: block;
+    width: 50%;
+    margin: 0;
     text-align: left;
 }
 
 .shop-cart-items-produto__name {
-    left: 5%;
     font-size: 1.3rem;
 }
 
 .shop-cart-items-produto__price {
-    margin-left: 6%;
+    /* margin-left: 6%; */
 }
 
 .shop-cart-items-produto__qty {
@@ -94,7 +103,7 @@ body, html {
 }
 
 .shop-cart-items-produto__total {
-    right: 5%;
+    
 }
 
 
@@ -104,9 +113,9 @@ body, html {
 }
 
 .shop-box__button {
+    float: right;
     margin: 3%;
     padding: 2%;
     border: none;
     background: lightgreen;
-    text-align: right;
 }

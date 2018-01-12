@@ -37,14 +37,31 @@ var produtos = [
     },
 ];
 
+function listarProdutos() {
 
-var total = {
-    produto1: produtos[0].price*produtos[0].qty,
+    event.preventDefault();
 
-    produto2: produtos[1].price*produtos[1].qty,
+    var listarProdutos = "";
+    var subtotal = "";
 
-    produto3: produtos[2].price*produtos[2].qty,
-};
+    for (var x = 0; x < produtos.length; x++) {
+
+        listarProdutos += ' <tr class="shop-cart-items-produto">';
+        listarProdutos += '<td class="shop-cart-items-produto__cancel"> <img src="img/cancel.png" alt="cancel" /> </td>'
+        listarProdutos += '<td class="shop-cart-items-produto__img"> <img src=' + produtos[x].image.src + '/> </td>'
+        listarProdutos += '<td class="shop-cart-items-produto-description"> <div class="shop-cart-items-produto__name"> ' + produtos[x].name + '</div>';
+        listarProdutos += '<div class="shop-cart-items-produto__details">' + '<br> COLOR: ' + produtos[x].color + ' SIZE: ' + produtos[x].size + ' </div> </td>';
+        listarProdutos += '<td class="shop-cart-items-produto__price"> $' + produtos[x].price + ' </td>';
+        listarProdutos += '<td class="shop-cart-items-produto__qty">' + produtos[x].qty + ' </td>';
+        listarProdutos += '<td class="shop-cart-items-produto__total">' + produtos[x].price * produtos[x].qty + '</td> </tr> ';
+
+        subtotal = x * (produtos[x].price * produtos[x].qty);
+    }
+
+    document.getElementById('produtos').innerHTML = listarProdutos;
+    document.getElementById('subtotal').innerHTML = subtotal;
+
+}
 
 
 // document.getElementById('produto1name').innerHTML = produtos[0].name ;
@@ -69,25 +86,17 @@ var total = {
 // document.getElementById('produto3total').innerHTML = " $" + total.produto1;
 
 
-var subtotal = total.produto1 + total.produto2 + total.produto3;
+// var total = {
+//     produto1: produtos[0].price*produtos[0].qty,
 
-document.getElementById('subtotal').innerHTML = subtotal;
+//     produto2: produtos[1].price*produtos[1].qty,
+
+//     produto3: produtos[2].price*produtos[2].qty,
+// };
 
 
-function listarProdutos() {
 
-    event.preventDefault();
+// var subtotal = total.produto1 + total.produto2 + total.produto3;
 
-    var listarProdutos = "";
+// document.getElementById('subtotal').innerHTML = subtotal;
 
-    for ( var x = 0 ; x < produtos.length ; x++ ) {
-
-        listarProdutos += '<tr class="shop-cart-items-produto">';
-        listarProdutos += '<td> <img class="shop-cart-items-produto__cancel" src="img/cancel.png" alt="cancel"> </td>'
-        listarProdutos += ' <img src=' + produtos[x].image.src + 'class="shop-cart-items-produto__img" />' 
-        listarProdutos += '<div class="shop-cart-items-produto-description"> <td ' + produtos[x].name + ' class="shop-cart-items-produto__name"> </td>' + 
-        listarProdutos += '<td ' + produtos[x].color +  'class="shop-cart-items-produto__details">Color: </td>' + Size: ' + produtos[x].size + ' $ ' + produtos[x].price + ' ' + produtos[x].qty + ' $' + total;
-    }
-
-    document.getElementById('produtos').innerHTML = listarProdutos;
-}

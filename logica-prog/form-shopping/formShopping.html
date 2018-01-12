@@ -26,13 +26,31 @@
             <li>Total</li>
         </ul>
 
-        <!-- <form class="shop-cart" action=""> -->
+        <!-- <div id="produtos"></div> -->
+        <table class="shop-cart-items" id="produtos"></table>
 
-        <table class="shop-cart-items">
-            <tr id="produtos"></tr>
-            <tr id="produtos"></tr>
-            <tr id="produtos"></tr>
-            <!-- <tr class="shop-cart-items-produto">
+        <h3 class="shop-cart__subtotal">Subtotal:
+            <p id="subtotal"></p>
+        </h3>
+
+        <button id="closeCart" onclick="closeCart()" class="shop-box__button">Shipping Info</button>
+        
+
+    </section>
+
+
+    <section class="shop-box">
+
+    </section>
+
+
+    <script src="formShopping.js"></script>
+</body>
+
+</html>
+
+
+<!-- <tr class="shop-cart-items-produto">
                 <td>
                     <img class="shop-cart-items-produto__cancel" src="img/cancel.png" alt="cancel">
                 </td>
@@ -73,24 +91,3 @@
                 <td id="produto3qty" class="shop-cart-items-produto__qty"></td>
                 <td id="produto3total" class="shop-cart-items-produto__total"></td>
             </tr> -->
-        </table>
-
-        <h3 class="shop-cart__subtotal">Subtotal:
-            <p id="subtotal"></p>
-        </h3>
-
-        <button id="closeCart" onclick="closeCart()" class="shop-box__button">Shipping Info</button>
-        <!-- </form> -->
-
-    </section>
-
-
-    <section class="shop-box">
-
-    </section>
-
-
-    <script src="formShopping.js"></script>
-</body>
-
-</html>
