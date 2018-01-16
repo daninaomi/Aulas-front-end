@@ -45,9 +45,13 @@ function listarProdutos() {
     event.preventDefault();
 
     var listarProdutos = "";
+    var totalGeral = 0;
     var subtotal = 0;
 
     for (var x = 0; x < produtos.length; x++) {
+        
+        subtotal += (produtos[x].price * produtos[x].qty);
+        totalGeral += subtotal;
 
         listarProdutos += ' <tr class="shop-cart-produto">';
         listarProdutos += '<td class="shop-cart-produto__cancel"> <img src="img/cancel.png" alt="cancel" /> </td>'
@@ -58,16 +62,16 @@ function listarProdutos() {
         listarProdutos += '<td> <input onchange="atualizarQty(this.id, this.value)" class="shop-cart-produto__qty" type="number" value="' + produtos[x].qty + '" id="' + produtos[x].cod + '"> =   </td>';
         listarProdutos += '<td class="shop-cart-produto__total" id="total-' + produtos[x].cod + '"> $' + produtos[x].price * produtos[x].qty + '</td> </tr> ';
 
-        subtotal += (produtos[x].price * produtos[x].qty);
     }
 
-    document.getElementById('produtos').innerHTML = listarProdutos;
-    
-    document.getElementById('subtotal').innerHTML = subtotal;
+    document.getElementById("produtos").innerHTML = listarProdutos;
+    document.getElementById("total-geral").innerHTML = totalGeral ;
 
 }
 
 function atualizarQty(_cod, _qty) {
+
+    var totalGeral = parseFloat(document.getElementById('total-geral').innerHTML);
     
     for (var x = 0; x < produtos.length; x++) {
 
@@ -75,10 +79,17 @@ function atualizarQty(_cod, _qty) {
             
             produtos[x].qty = _qty;
 
-            var totalProduto = produtos[x].price * produtos[x].qty;
+            var totalNovo = parseFloat(produtos[x].price * produtos[x].qty);
             var codProd = 'total-'+ produtos[x].cod;
+            var totalAntigo = document.getElementById(codProd).innerHTML;
 
-            document.getElementById(codProd).innerHTML = "R$ " + totalProduto;
+            // (TOTAL GERAL - TOTAL ANTIGO) + TOTAL NOVO
+
+            totalGeral = (totalGeral - totalAntigo) + totalNovo;
+
+
+            document.getElementById(codProd).innerHTML =  totalNovo.toFixed(2);
+            document.getElementById('total-geral').innerHTML =  totalGeral.toFixed(2);
 
             break;
         }
@@ -86,7 +97,46 @@ function atualizarQty(_cod, _qty) {
 }
 
 
-// var dados = [
+var dadosCliente = {
+    address: {
+
+    },
+    contact: {
+
+    }
+}
+
+function validateForm() {
+
+    objAddress = {
+        country: document.getElementById('form-country').value,
+        city: document.getElementById('form-city').value,
+        state: document.getElementById('form-state').value,
+        zip: document.getElementById('form-zip').value,
+        ad1: document.getElementById('form-ad1').value,
+        ad2: document.getElementById('form-ad2').value,
+    }
+
+    objContact = {
+        firstname: document.getElementById('form-firstname').value,
+        lastname: document.getElementById('form-lastname').value,
+        email: document.getElementById('form-email').value,
+        phone: document.getElementById('form-phone').value,
+    }
+
+    dadosCliente.address = objAddress;
+    dadosCliente.contact = objContact;
+}
+
+function validateAddress( _objAddress) {
+
+}
+
+function validateContact( _objContact) {
+
+}
+
+// var dadosAddress = [
 //     {
 //         name: "Country"
 //     },
@@ -95,23 +145,61 @@ function atualizarQty(_cod, _qty) {
 //     },
 //     {
 //         name: "State/Region/Province"
+//     },
+//     {
+//         name: "Zip Code"
+//     },
+//     {
+//         name: "Address 1"
+//     },
+//     {
+//         name: "Address 2"
 //     }
 // ];
 
-// function dadosForm() {
+// var dadosContact = [
+//     {
+//         name: "First Name"
+//     },
+//     {
+//         name: "Last Name"
+//     },
+//     {
+//         name: "E-mail"
+//     },
+//     {
+//         name: "Phone"
+//     }
+// ];
 
+
+// function dadosForm() {
+    
 //     event.preventDefault();
 
-//     var dadosForm = "";
+//     var dadosAdress = "";
+    
+//     for (var x = 0; x < dadosAddress.length; x++) {
 
-//     for (var x = 0; x < produtos.length; x++) {
-
-//         dadosForm += '<input type="text" placeholder="' + dados[x].name + '" >';
+//         dadosAdress += '<input type="text" value="' + dadosAddress[x].name + '" >';
+        
 //     }
 
-//     document.getElementById('dados').innerHTML = dadosForm;
+//     document.getElementById('dadosAddress').innerHTML = dadosAdress;
+
+//     var dadosContact = "";
+
+//     for (var x = 0; x < dadosContact.length; x++) {
+
+//         dadosContact += '<input type="text" value="' + dadosContact[x].name + '" >';
+        
+//     }
+
+//     document.getElementById('dadosContact').innerHTML = dadosContact;
 
 // }
+
+
 
 
 // document.getElementById('produto1name').innerHTML = produtos[0].name ;

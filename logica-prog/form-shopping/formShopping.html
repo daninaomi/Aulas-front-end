@@ -10,12 +10,17 @@
     <link rel="stylesheet" href="formShopping.css">
 </head>
 
+<!--<body onload="listarProdutos(); dadosForm()">-->
+
 <body onload="listarProdutos()">
     <section class="shop-box">
         <ul class="shop-box-etapas">
-            <li class="shop-box-etapas__title shop-box-etapas__title--pink"><div class="circulo">1</div>  Shopping Cart</li>
-            <li class="shop-box-etapas__title"><div class="circulo">2</div>  Shipping Info</li>
-            <li class="shop-box-etapas__title"><div class="circulo">3</div>  Payment Method</li>
+            <li class="shop-box-etapas__title shop-box-etapas__title--pink">
+                <div class="circulo">1</div> Shopping Cart</li>
+            <li class="shop-box-etapas__title">
+                <div class="circulo">2</div> Shipping Info</li>
+            <li class="shop-box-etapas__title">
+                <div class="circulo">3</div> Payment Method</li>
         </ul>
 
         <p class="shop-box__text">You have 3 items in your order</p>
@@ -30,41 +35,72 @@
         <table class="shop-cart" id="produtos"></table>
 
         <h3 class="shop-cart__subtotal">Subtotal:
-            <p id="subtotal"></p>
+            <p id="total-geral"></p>
         </h3>
 
         <div class="shop-box-back">
             <img class="shop-box-back__icon" src="img/back.png" alt="back">
-            <h2 class="shop-box-back__text">Continue Shopping</h2>
+            <a href="#" class="shop-box-back__text">Continue Shopping</a>
         </div>
 
         <button id="closeCart" onclick="closeCart()" class="shop-box__button">Shipping Info</button>
-        
+
 
     </section>
 
 
-    <!-- <section class="shop-box">
+    <section class="shop-box">
 
         <ul class="shop-box-etapas">
-            <li class="shop-box-etapas__title"><div class="circulo">1</div>  Shopping Cart</li>
-            <li class="shop-box-etapas__title shop-box-etapas__title--orange"><div class="circulo">2</div>  Shipping Info</li>
-            <li class="shop-box-etapas__title"><div class="circulo">3</div>  Payment Method</li>
+            <li class="shop-box-etapas__title">
+                <div class="circulo">1</div> Shopping Cart</li>
+            <li class="shop-box-etapas__title shop-box-etapas__title--orange">
+                <div class="circulo">2</div> Shipping Info</li>
+            <li class="shop-box-etapas__title">
+                <div class="circulo">3</div> Payment Method</li>
         </ul>
 
-        <form action="" onload="dadosForm()">
-            <div>
+        <form action=" " class="shop-box-dados">
+            <div class="shop-box-dados-list">
                 <h2>Shipping Address</h2>
-                <div id="dados"></div>
+                <!--<div id="dadosAddress"></div>-->
+                <input id="form-country" class="shop-box-dados-list__input" list="Country" placeholder="Country">
+                <datalist id="Country">
+                    <option value="Country1"> </option>
+                    <option value="Country2"> </option>
+                    <option value="Country3"> </option>
+                </datalist>
+                <input id="form-city" class="shop-box-dados-list__input" list="City" placeholder="City">
+                <datalist id="City">
+                    <option value="City1"> </option>
+                    <option value="City2"> </option>
+                    <option value="City3"> </option>
+                </datalist>
+                <input id="form-state" class="shop-box-dados-list__input" type="text" placeholder="State/Region/Province">
+                <input id="form-zip" class="shop-box-dados-list__input" type="number" placeholder="Zip Code">
+                <input id="form-ad1" class="shop-box-dados-list__input" type="text" placeholder="Address 1">
+                <input id="form-ad2" class="shop-box-dados-list__input" type="text" placeholder="Address 2">
             </div>
 
-            <div>
+            <div class="shop-box-dados-list">
                 <h2>Contact Info</h2>
-                <div></div>
+                <!--<div id="dadosContact"></div>-->
+                <input id="form-firstname" class="shop-box-dados-list__input" type="text" placeholder="First Name">
+                <input id="form-lastname" class="shop-box-dados-list__input" type="text" placeholder="Last Name">
+                <input id="form-email" class="shop-box-dados-list__input" type="email" placeholder="E-mail">
+                <input id="form-phone" class="shop-box-dados-list__input" type="tel" placeholder="Phone">
             </div>
+
+            <h2>Shipping Method</h2>
+            <input id="form-" class="shop-box-dados-list__input-check" type="radio" name="shippingmethod" value="standard"> $10 Standard (2-3 weeks)
+            <input id="form-" class="shop-box-dados-list__input-check" type="radio" name="shippingmethod" value="ultraspeed"> $20 Ultra Speed (1-3 days)
+
+
+            <button id="shippingInfo" onclick="validateForm()" class="shop-box__button">Payment Method</button>
+
         </form>
 
-    </section> -->
+    </section>
 
 
     <script src="formShopping.js"></script>

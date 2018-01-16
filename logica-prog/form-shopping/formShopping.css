@@ -149,14 +149,17 @@ body, html {
 .shop-box-back {
     /* float: left; */
     display: inline-block;
+    margin: 3%;
 }
 
 .shop-box-back__icon {
-    width: 30px;
+    width: 20px;
 }
 
 .shop-box-back__text {
     font-size: 1rem;
+    text-decoration:none;
+    color: black;
 }
 
 .shop-box__button {
@@ -165,9 +168,31 @@ body, html {
     padding: 2%;
     border: none;
     background: green;
+    color: white;
 }
 
 .shop-box-etapas__title--orange {
     background: orangered;
     color: white;
+}
+
+.shop-box-dados {
+    width: 100%;
+}
+
+.shop-box-dados-list {
+    width: 40%;
+    float: left;
+    margin: 2% 5%;
+}
+
+.shop-box-dados-list__input {
+    width: 100%;
+    margin: 2% 0;
+}
+
+.shop-box-dados-list__input-check {
+    float: right;
+    width: 50%;
+    font-size: 0.7rem;
 }
