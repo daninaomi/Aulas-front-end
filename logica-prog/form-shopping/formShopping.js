@@ -97,16 +97,32 @@ function atualizarQty(_cod, _qty) {
 }
 
 
+
 var dadosCliente = {
-    address: {
-
-    },
-    contact: {
-
-    }
+    address: { },
+    contact: { }
 }
 
 function validateForm() {
+
+    event.preventDefault();
+    
+    // if(validateAddress() && validateContact()) {
+    //     console.log('validação está ok.. pode prosseguir');
+    //     console.log(dadosCliente);
+    // } else { 
+    //     console.log('validação não passou.. preencher todos os campos');
+    // };
+    
+    // console.log(validateAddress());
+    // console.log(validateContact());
+
+    // dadosCliente.contact = objContact;
+}
+
+function validateAddress( ) {
+
+    // var retorno = false;
 
     objAddress = {
         country: document.getElementById('form-country').value,
@@ -115,24 +131,65 @@ function validateForm() {
         zip: document.getElementById('form-zip').value,
         ad1: document.getElementById('form-ad1').value,
         ad2: document.getElementById('form-ad2').value,
+    };
+
+    if ( objAddress.country == 0 ) {
+        return false;
+    } else if ( objAddress.city == 0 ) {
+        return false;
+    } else if ( objAddress.state.trim().length == 0 ) {
+        return false;
+    } else if ( objAddress.zip.trim().length == 0 ) {
+        return false;
+    } else if ( objAddress.ad1.trim().length == 0 ) {
+        return false;
+    } else if ( objAddress.ad2.trim().length == 0 ) {
+        return false;
+    } else {
+        dadosCliente.address = objAddress;
+        return true;
+    };
+
+}
+
+function validateContact() {
+
+    var shippingmethod = false;
+
+    if (document.getElementById('form-ship1').checked) {
+        var shippingmethod = document.getElementById('form-ship1').value;
+
+    } else if (document.getElementById('form-ship2').checked) {
+        var shippingmethod = document.getElementById('form-ship2').value;
+
+    } else {
+        return false;
     }
 
+    
     objContact = {
         firstname: document.getElementById('form-firstname').value,
         lastname: document.getElementById('form-lastname').value,
         email: document.getElementById('form-email').value,
         phone: document.getElementById('form-phone').value,
+        shippingmethod: shippingmethod
     }
 
-    dadosCliente.address = objAddress;
-    dadosCliente.contact = objContact;
-}
+    
+    if ( objContact.firstname.trim().length == 0 ) {
+        return false;
+    } else if ( objContact.lastname.trim().length == 0 ) {
+        return false;
+    } else if ( objContact.email.trim().length == 0 ) {
+        return false;
+    } else if ( objContact.phone.trim().length == 0 ) {
+        return false;
+    } else {
+        dadosCliente.Contact = objContact;
+        return true;
+    };
 
-function validateAddress( _objAddress) {
-
-}
-
-function validateContact( _objContact) {
+    console.log(shippingmethod);
 
 }
 

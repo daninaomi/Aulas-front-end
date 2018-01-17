@@ -183,7 +183,7 @@ body, html {
 .shop-box-dados-list {
     width: 40%;
     float: left;
-    margin: 2% 5%;
+    margin: 2% 2%;
 }
 
 .shop-box-dados-list__input {
@@ -192,7 +192,11 @@ body, html {
 }
 
 .shop-box-dados-list__input-check {
-    float: right;
+    /*float: right;*/
     width: 50%;
+    height: auto;
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid black;
     font-size: 0.7rem;
 }
